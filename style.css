@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #000;
+    color: white;
+   
+}
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0,0,0,0.7)),url(back.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:10px 0;
+    
+}
+
+nav img{
+   width: 200PX;
+   height: auto;
+   margin-left: 50px;
+   margin-top: 20px;
+}
+nav select {
+    background: transparent;
+    color: #fff;
+    padding:7px 4px 5px 25px;
+    border-radius:3px;
+    font-size: 16px;
+    margin:10px;
+    border-radius: 3px;
+    text-align: center;
+    height: 45%;
+}
+nav div.select{
+    display:inline-block;
+   align-items: center;
+   background: transparent;
+   padding: 7px 10px ;
+}
+nav div.select svg{
+    height: 20px;
+    fill: #ffffff00;
+    position: absolute;
+    margin-top:16px;
+    margin-left: 15px;
+}
+
+nav a.button{
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    background: rgba(204, 0, 0, 0.933);
+    color: white;
+    padding: 7px 10px;
+    margin: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right:90px;
+}
+
+nav button:hover{
+    background-color: #000000c6;
+    transition: 0,3s;
+    transform:scale(1.2);
+}
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -326 -5px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+.header-content h1 .header-content p{
+    font-weight: normal;
+}
+.header-content h1 {
+    max-width:650px ;
+    font-size:60px;
+    line-height: 70px;
+    font-weight: 600;
+}
+
+.header-content p{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.email-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    border-radius: 4px;
+    overflow: hidden;
+    
+}
+
+.email-input input{
+    flex: 1;
+    margin-left: 60px;
+    border-color: #ffffff88;
+    padding: 15px 20px;
+    border-radius:5px;
+    width:400px;
+    background-color: rgba(3, 3, 3, 0.075);
+   
+}
+
+.email-input a{
+    margin-left: 20px;
+    padding: 15px 19px;
+    border-radius:5px;
+    font-size: 40px;
+}
+
+.email-input a:hover{
+    background-color: #cc1313;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.email-input input ~ span{
+    position: absolute;
+    left:75px; 
+    top:14px;
+}
+.email-input a{
+    font-size: 20px;
+    background-color:  rgba(204, 0, 0, 0.933);
+    color: #fff; 
+    text-decoration: none;
+    border-radius: 3px;
+}
+.features{
+   padding:30px 50px ;
+   font-size: 22px;
+   padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+.row{
+    display: flex;
+    width:100%; 
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 0;
+}
+.text-col{
+    flex-basis: 50%; 
+    margin-bottom:20px ;
+}
+.img-col{
+    flex-basis: 50%; 
+    margin-bottom:20px ;
+}
+.img-col img{
+    display: block;
+    width:80%;
+    margin:auto;
+}
+.img-col video{
+    display: block;
+    width:80%;
+    margin:auto;
+}
+.features h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom:20px;
+}
+.fag{
+    padding: 10px 14%;
+    text-align: center;
+    font-size: 25px;
+}
+.accordion{
+    margin: 60PX auto;
+    width: 100%;
+    max-width: 750PX;
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size:18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after{
+    content: "+";
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[ type="radio"]{
+    display: none;
+}
+
+.accordion .content{
+   background: #303030;
+   text-align: left;
+   padding: 0 20px;
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[ type="radio"]:checked + label + .content{
+   max-height:600px;
+   padding: 30px 20px;
+}
+
+.accordion input[ type="radio"]:checked + label::after{
+    transform: rotate(13deg);
+}
+
+ .fag span{
+    font-size: 20px;
+ }
+
+.fag small {
+   font-size: 21px;
+}
+
+/* --------------------footer------------------- */
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.footer .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom:10px;
+}
+
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.copyright-txt{
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*-------------------madia-queries-for-small-screen-------------------*/
+@media only screen and (max-width:600px){
+    .log{
+        width: 100px;
+    }
+    nav button {
+        padding: 5px 10px;
+    }
+}
